@@ -16,6 +16,11 @@ public class Faculty extends User{
     }
 
     @Override
+    public String getUserType() {
+        return "Funcionário";
+    }
+
+    @Override
     public int getLimitOfBooksToCheckOut() {
         return 5;
     }
@@ -30,5 +35,13 @@ public class Faculty extends User{
         return "Faculty{" +
                 "department='" + department + '\'' +
                 "} " + super.toString();
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }

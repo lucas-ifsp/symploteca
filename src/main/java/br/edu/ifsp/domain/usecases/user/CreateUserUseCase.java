@@ -21,7 +21,7 @@ public class CreateUserUseCase {
             throw new IllegalArgumentException(notification.errorMessage());
 
         String email = user.getEmail();
-        if (userDAO.findByEmail(email).isPresent())
+        if (userDAO.findOneByEmail(email).isPresent())
             throw new EntityAlreadyExistsException("This email is already in use.");
 
         return userDAO.create(user);

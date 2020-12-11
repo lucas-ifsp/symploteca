@@ -22,7 +22,7 @@ public class FindUserUseCase {
     public Optional<User> findOneByEmail(String email) {
         if (Validator.nullOrEmpty(email))
             throw new IllegalArgumentException("Email can not be null or empty.");
-        return userDAO.findByEmail(email);
+        return userDAO.findOneByEmail(email);
     }
 
     public List<User> findAll() {

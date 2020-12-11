@@ -1,4 +1,4 @@
-package br.edu.ifsp.application.repository;
+package br.edu.ifsp.application.repository.inmemory;
 
 import br.edu.ifsp.domain.entities.user.User;
 import br.edu.ifsp.domain.usecases.user.UserDAO;
@@ -23,7 +23,7 @@ public class InMemoryUserDAO implements UserDAO {
     }
 
     @Override
-    public Optional<User> findByEmail(String email) {
+    public Optional<User> findOneByEmail(String email) {
         return db.values().stream()
                 .filter(user -> user.getEmail().equals(email))
                 .findAny();

@@ -7,7 +7,7 @@ public abstract class User {
     private String email;
     private String phone;
 
-
+    public abstract String getUserType();
     public abstract int getLimitOfBooksToCheckOut();
     public abstract int getCheckoutTimeLimitInDays();
 

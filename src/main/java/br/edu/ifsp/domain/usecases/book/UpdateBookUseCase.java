@@ -1,7 +1,6 @@
 package br.edu.ifsp.domain.usecases.book;
 
 import br.edu.ifsp.domain.entities.book.Book;
-import br.edu.ifsp.domain.usecases.utils.EntityAlreadyExistsException;
 import br.edu.ifsp.domain.usecases.utils.EntityNotFoundException;
 import br.edu.ifsp.domain.usecases.utils.Notification;
 import br.edu.ifsp.domain.usecases.utils.Validator;

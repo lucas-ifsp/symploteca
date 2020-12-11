@@ -9,18 +9,18 @@ public class Book {
     private String publisher;
     private String isbn;
 
-    private BookGender gender;
+    private BookGenre gender;
     private BookStatus status;
 
     public Book() {
         status = BookStatus.AVAILABLE;
     }
 
-    public Book(Integer edition, Integer numberOfPages, String name, String authors, String publisher, String isbn, BookGender gender, BookStatus status) {
+    public Book(Integer edition, Integer numberOfPages, String name, String authors, String publisher, String isbn, BookGenre gender, BookStatus status) {
         this(null , edition,  numberOfPages,  name,  authors,  publisher,  isbn,  gender,  status);
     }
 
-    public Book(Integer id, Integer edition, Integer numberOfPages, String name, String authors, String publisher, String isbn, BookGender gender, BookStatus status) {
+    public Book(Integer id, Integer edition, Integer numberOfPages, String name, String authors, String publisher, String isbn, BookGenre gender, BookStatus status) {
         this.id = id;
         this.edition = edition;
         this.numberOfPages = numberOfPages;
@@ -85,14 +85,14 @@ public class Book {
     }
 
     public void setIsbn(String isbn) {
-        isbn = isbn;
+        this.isbn = isbn;
     }
 
-    public BookGender getGender() {
+    public BookGenre getGenre() {
         return gender;
     }
 
-    public void setGender(BookGender gender) {
+    public void setGenre(BookGenre gender) {
         this.gender = gender;
     }
 

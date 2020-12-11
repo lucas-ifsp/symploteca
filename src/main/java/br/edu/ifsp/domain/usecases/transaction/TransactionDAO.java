@@ -1,6 +1,5 @@
 package br.edu.ifsp.domain.usecases.transaction;
 
-import br.edu.ifsp.domain.entities.book.Book;
 import br.edu.ifsp.domain.entities.transaction.Transaction;
 import br.edu.ifsp.domain.usecases.utils.DAO;
 

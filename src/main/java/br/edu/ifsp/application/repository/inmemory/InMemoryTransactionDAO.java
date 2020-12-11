@@ -1,4 +1,4 @@
-package br.edu.ifsp.application.repository;
+package br.edu.ifsp.application.repository.inmemory;
 
 import br.edu.ifsp.domain.entities.transaction.Transaction;
 import br.edu.ifsp.domain.usecases.transaction.TransactionDAO;

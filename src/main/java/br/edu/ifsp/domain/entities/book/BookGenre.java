@@ -2,14 +2,17 @@ package br.edu.ifsp.domain.entities.book;
 
 import java.util.Arrays;
 
-public enum  BookStatus {
-
-    AVAILABLE("Disponível"),
-    CHECKED_OUT ("Emprestado");
+public enum BookGenre {
+    ACTION("Ação"),
+    DRAMA ("Drama"),
+    HISTORY ("História"),
+    HORROR ("Horror"),
+    SCIENCE ("Ciência"),
+    TECHNICAL("Técnico");
 
     private String label;
 
-    BookStatus(String label){
+    BookGenre(String label){
         this.label = label;
     }
 
@@ -18,8 +21,8 @@ public enum  BookStatus {
         return label;
     }
 
-    public static BookStatus toEnum(String value){
-        return Arrays.stream(BookStatus.values())
+    public static BookGenre toEnum(String value){
+        return Arrays.stream(BookGenre.values())
                 .filter(c -> value.equals(c.toString()))
                 .findAny()
                 .orElseThrow(IllegalArgumentException::new);

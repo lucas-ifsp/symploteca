@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.application.controller.MainUIController">
+    <children>
+        <Label layoutX="18.0" layoutY="105.0" text="ID do Leitor:  ">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtId" layoutX="118.0" layoutY="99.0" prefHeight="34.0" prefWidth="132.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Button fx:id="btnSearch" layoutX="261.0" layoutY="99.0" mnemonicParsing="false" onAction="#findUser" prefHeight="34.0" prefWidth="65.0" text="Buscar" />
+        <Label fx:id="lbName" layoutX="346.0" layoutY="107.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableView" layoutX="14.0" layoutY="165.0" onMouseClicked="#getSelectedAndSetButton" prefHeight="347.0" prefWidth="752.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="165.0">
+            <columns>
+                <TableColumn fx:id="cName" prefWidth="200" text="Nome" />
+                <TableColumn fx:id="cAuthors" prefWidth="200" text="Autores" />
+                <TableColumn fx:id="cPublisher" prefWidth="150" text="Editora" />
+                <TableColumn fx:id="cGenre" prefWidth="100" text="Gênero" />
+                <TableColumn fx:id="cStatus" prefWidth="100" text="Estado" />
+            </columns>
+        </TableView>
+        <Pane layoutX="14.0" layoutY="369.0" prefHeight="61.0" prefWidth="573.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <children>
+                <Button fx:id="btnManageBooks" layoutY="14.0" mnemonicParsing="false" onAction="#manageBooks" prefHeight="46.0" prefWidth="132.0" text="Gerenciar Livros" />
+                <Button fx:id="btnUsersBooks" layoutX="142.0" layoutY="14.0" mnemonicParsing="false" onAction="#manageUsers" prefHeight="46.0" prefWidth="155.0" text="Gerenciar Usuários" />
+                <Button fx:id="btnBorrowOrReturn" layoutX="547.0" layoutY="14.0" mnemonicParsing="false" onAction="#borrowOrReturn" prefHeight="46.0" prefWidth="205.0" text="Realizar Empréstimo" />
+
+            </children>
+        </Pane>
+      <Label layoutX="230.0" layoutY="14.0" prefHeight="34.0" prefWidth="333.0" text="SimploTeca: The Clear Library">
+         <font>
+            <Font name="Andale Mono" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

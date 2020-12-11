@@ -16,6 +16,11 @@ public class Student extends User{
     }
 
     @Override
+    public String getUserType() {
+        return "Estudante";
+    }
+
+    @Override
     public int getLimitOfBooksToCheckOut() {
         return 3;
     }
