@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.application.controller.BookManagementUIController">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="10.0" prefHeight="342.0" prefWidth="573.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="25.0">
+        <columns>
+            <TableColumn fx:id="cName" prefWidth="200" text="Nome" />
+            <TableColumn fx:id="cAuthors" prefWidth="200" text="Autores" />
+            <TableColumn fx:id="cPublisher" prefWidth="150" text="Editora" />
+            <TableColumn fx:id="cGenre" prefWidth="100" text="Gênero" />
+            <TableColumn fx:id="cStatus" prefWidth="100" text="Estado" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="369.0" prefHeight="61.0" prefWidth="573.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Button fx:id="btnDelete" layoutX="382.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="34.0" prefWidth="82.0" text="Deletar" />
+            <Button fx:id="btnEdit" layoutX="574.0" layoutY="14.0" mnemonicParsing="false" onAction="#editBook" prefHeight="34.0" prefWidth="82.0" text="Editar" />
+             <Button fx:id="btnDetail" layoutX="479.0" layoutY="14.0" mnemonicParsing="false" onAction="#detailBook" prefHeight="34.0" prefWidth="82.0" text="Detalhar" />
+             <Button fx:id="btnNew" layoutX="670.0" layoutY="14.0" mnemonicParsing="false" onAction="#createBook" prefHeight="34.0" prefWidth="82.0" text="Novo" />
+            <Button fx:id="btnBack" layoutY="14.0" mnemonicParsing="false" onAction="#backToPreviousScene" prefHeight="34.0" prefWidth="82.0" text="Voltar" />
+         </children></Pane>
+   </children>
+</AnchorPane>
